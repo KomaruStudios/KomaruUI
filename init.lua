@@ -409,8 +409,7 @@ function library.Component:AddBase(name, __parent, desc, tt, ch)
 			})
 		})
 		InputService.InputChanged:Connect(function(input)
-			-- no idea if this works on mobile
-			if input.UserInputType == Enum.UserInputType.MouseMovement then
+			if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
 				TTR.Visible = uihovery
 				TTR.Size = UDim2.fromOffset(TTR.TextLabel.TextBounds.X + 10, TTR.TextLabel.TextBounds.Y + 4)
 				if uihovery then
